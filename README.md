@@ -7,3 +7,13 @@ The app presents a ***Bootstrap 4*** styled UI in ***React*** supported by a ***
 * [React](https://reactjs.org/)
 * [Go](https://golang.org/)
 * [Bootstrap 4](http://getbootstrap.com/)
+
+## To run
+In the frontend directory, run
+```
+nodemon
+```
+In the root directory, run
+```
+go run app.go
+```
