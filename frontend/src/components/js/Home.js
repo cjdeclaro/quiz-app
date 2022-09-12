@@ -15,19 +15,18 @@ class Home extends Component {
           <div>
             <br></br>
             <br></br>
-            <p className="display-2 text-center">Welcome to Quiz World!</p>
-            <p className="display-3 text-center">Up for some quizzing?</p>
-            <p className="display-4 text-center">Then you're at the right place!</p>
+            <p className="display-2 text-center" style={{fontFamily: "Poppins"}}><b>Welcome!</b></p>
+            <p className="display-3 text-center" style={{fontFamily: "Poppins"}}>This is CJ's Little Quiz App</p>
             <br></br>
             <br></br>
             <div className="row component-container">
               <div className="col-sm-2"></div>
               <div className="col-sm-3">
-                <Link to={'/login/'} className="btn btn-primary btn-block btn-lg"><strong className="h3">Login</strong></Link>
+                <Link to={'/login/'} className="btn btn-primary btn-block btn-lg" style={{backgroundColor: "#e45447"}}><strong className="h3">Login</strong></Link>
               </div>
               <div className="col-sm-2"></div>
               <div className="col-sm-3">
-                <Link to={'/signup/'} className="btn btn-success btn-block btn-lg"><strong className="h3">Sign Up</strong></Link>
+                <Link to={'/signup/'} className="btn btn-success btn-block btn-lg" style={{backgroundColor: "#90acd1"}}><strong className="h3">Sign Up</strong></Link>
               </div>
               <div className="col-sm-2"></div>
             </div>

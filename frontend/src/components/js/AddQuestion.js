@@ -212,7 +212,7 @@ class AddQuestion extends Component {
             <div className="col-sm-1"></div>
             <div className="col-sm-2">
               {!this.state.addOptions &&
-                <button type="submit" className="btn btn-success btn-block">Add Question</button>
+                <button type="submit" className="btn btn-success btn-block" style={{backgroundColor: "#e45447"}}>Add Question</button>
               }
               {this.state.addOptions &&
                 <button type="submit" className="btn btn-success btn-block" disabled>Add Question</button>
@@ -281,7 +281,7 @@ class AddQuestion extends Component {
                 <div className="col-sm-1 text-right option-correct-text"></div>
               }
               <div className="col-sm-2 option-submit">
-                <button type="submit" className="btn btn-success btn-block">Add Option</button>
+                <button type="submit" className="btn btn-success btn-block" style={{backgroundColor: "#e45447"}}>Add Option</button>
               </div>
               <div className="col-sm-2"></div>
             </div>

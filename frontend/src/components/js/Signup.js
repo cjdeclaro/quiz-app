@@ -20,6 +20,7 @@ class Signup extends Component {
     this.handleUsernameChange = this.handleUsernameChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleRepeatPasswordChange = this.handleRepeatPasswordChange.bind(this);
+    this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
     this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
     this.handleLastNameChange = this.handleLastNameChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,7 +43,7 @@ class Signup extends Component {
           password: "",
           firstname: this.state.formData.firstname,
           lastname: this.state.formData.lastname,
-          admin: false,
+          admin: this.state.formData.admin,
           repeatpassword: ""
         },
         error: "Password and confirmation must be the same"
@@ -95,7 +96,7 @@ class Signup extends Component {
         password: this.state.formData.password,
         firstname: this.state.formData.firstname,
         lastname: this.state.formData.lastname,
-        admin: false,
+        admin: this.state.formData.admin,
         repeatpassword: this.state.formData.repeatpassword,
       }
     });
@@ -108,7 +109,7 @@ class Signup extends Component {
         password: event.target.value,
         firstname: this.state.formData.firstname,
         lastname: this.state.formData.lastname,
-        admin: false,
+        admin: this.state.formData.admin,
         repeatpassword: this.state.formData.repeatpassword,
       }
     });
@@ -121,8 +122,21 @@ class Signup extends Component {
         password: this.state.formData.password,
         firstname: this.state.formData.firstname,
         lastname: this.state.formData.lastname,
-        admin: false,
+        admin: this.state.formData.admin,
         repeatpassword: event.target.value,
+      }
+    });
+  }
+
+  handleCheckboxChange (event) {
+    this.setState({
+      formData: {
+        username: this.state.formData.username,
+        password: this.state.formData.password,
+        firstname: this.state.formData.firstname,
+        lastname: this.state.formData.lastname,
+        admin: event.target.checked,
+        repeatpassword: this.state.formData.repeatpassword,
       }
     });
   }
@@ -134,7 +148,7 @@ class Signup extends Component {
         password: this.state.formData.password,
         firstname: event.target.value,
         lastname: this.state.formData.lastname,
-        admin: false,
+        admin: this.state.formData.admin,
         repeatpassword: this.state.formData.repeatpassword,
       }
     });
@@ -147,7 +161,7 @@ class Signup extends Component {
         password: this.state.formData.password,
         firstname: this.state.formData.firstname,
         lastname: event.target.value,
-        admin: false,
+        admin: this.state.formData.admin,
         repeatpassword: this.state.formData.repeatpassword,
       }
     });
@@ -189,6 +203,12 @@ class Signup extends Component {
             <div className="col-sm-6">
               <label><strong>Repeat Password</strong></label>
               <input className="form-control" type="password" value={this.state.formData.repeatpassword} onChange={this.handleRepeatPasswordChange} required></input>
+            </div>
+          </div>
+          <div className="form-group row">
+            <div className="col-sm-12">
+              <label><strong>Admin?</strong></label>
+              <input type="checkbox" checked={this.state.formData.admin} onChange={this.handleCheckboxChange}></input>
             </div>
           </div>
           <div className="row signup-buttons">

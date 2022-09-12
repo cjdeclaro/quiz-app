@@ -80,10 +80,10 @@ class Performance extends Component {
   render() {
     return (
       <div className="container">
-        {this.state.user.scores.length > 0 &&
+        {this.state.user.scores && this.state.user.scores.length > 0 &&
           <p className="display-3 text-center remove-genre-heading">My Performance</p>
         }
-        {this.state.user.scores.length == 0 &&
+        {!(this.state.user.scores && this.state.user.scores.length > 0) &&
           <div className="text-center display-4">
             <br/>
             <p>You haven't played any quizzes. </p>
@@ -92,7 +92,7 @@ class Performance extends Component {
         }
         <br></br>
         <br></br>
-        {this.state.user.scores.length > 0 &&
+        {this.state.user.scores && this.state.user.scores.length > 0 &&
           <table className="table table-striped">
             <thead className="thead-dark">
               <tr>

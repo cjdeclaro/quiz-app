@@ -140,11 +140,8 @@ class Login extends Component {
           </div>
           <div className="row login-buttons">
             <div className="col-sm-4"></div>
-            <div className="col-sm-2 text-center login-button">
-              <button type="submit" className="btn btn-primary btn-block"><strong>Login</strong></button>
-            </div>
-            <div className="col-sm-2 text-center login-button">
-              <Link to={'/signup/'} className="btn btn-success btn-block"><strong>Sign Up</strong></Link>
+            <div className="col-sm-4 text-center login-button">
+              <button type="submit" className="btn btn-primary btn-block" style={{backgroundColor: "#e45447"}}><strong>Login</strong></button>
             </div>
             <div className="col-sm-4"></div>
           </div>
